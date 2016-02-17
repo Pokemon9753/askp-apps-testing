@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2016 by ASKP
+-->
+<html>
+<meta name="robots" content="noindex">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>chat</title>
+
+</head>
+  <body>
+	<input id="numberTxt" placeholder="Enter mobile number" value="" type="tel" />
+<textarea id="messageTxt" placeholder="Enter message"></textarea>
+<input type="button" onclick="app.sendSms()" value="Send SMS" />
+
+ <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+ 
+	<script id="jsbin-javascript">
+var app = {
+    sendSms: function() {
+        var number = document.getElementById('numberTxt').value;
+        var message = document.getElementById('messageTxt').value;
+        alert(number);
+        alert(message);
+
+        //CONFIGURATION
+        var options = {
+            replaceLineBreaks: false, // true to replace \n by a new line, false by default
+            android: {
+                intent: ''  // send SMS with the native android SMS messaging
+                //intent: '' // send SMS without open any other app
+            }
+        };
+
+        var success = function () { alert('Message sent successfully'); };
+        var error = function (e) { alert('Message Failed:' + e); };
+        sms.send(number, message, options, success, error);
+    }
+};
+</script>
+</body>
+</html>
