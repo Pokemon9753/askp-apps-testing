@@ -3,7 +3,7 @@
         xmlns:gap = 'http://phonegap.com/ns/1.0'
         id        = "org.askp.smsASKP"
         version   = "0.0.1">
-    <name>Chatter</name>
+    <name>smsASKP</name>
 
 <platform name="android" />
     <description>
