@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = 'http://www.w3.org/ns/widgets'
+        xmlns:gap = 'http://phonegap.com/ns/1.0'
+        id        = "org.askp.chatter"
+        version   = "0.0.1">
+    <name>Chatter</name>
+
+<platform name="android" />
+    <description>
+        Chatter App
+    </description>
+
+    <author>
+        ASKP
+    </author>
+
+    <feature name="http://api.phonegap.com/1.0/device" />
+
+    <preference name="phonegap-version" value="3.7.0"/>
+<plugin name="com.cordova.plugins.sms" spec="0.1.1" source="pgb" />
+</widget>
